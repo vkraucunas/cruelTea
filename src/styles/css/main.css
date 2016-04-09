@@ -1,3 +1,25 @@
 html {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  color: #2d2d2d; }
+  color: #2d2d2d;
+  background-color: #FAF3DD;
+  font-size: 16px; }
+
+.nav {
+  background-color: #8FC0A9;
+  padding: 1rem; }
+  .nav a {
+    text-decoration: none;
+    color: #696D7D;
+    margin: 1rem 1rem; }
+
+div.inline {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0; }
+
+.inline-text {
+  display: inline; }
+
+.right {
+  padding-left: 30%;
+  padding-right: 1rem; }

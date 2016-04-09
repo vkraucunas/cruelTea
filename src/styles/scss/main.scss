@@ -9,4 +9,32 @@ html {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: $dark;
     background-color: $cream;
+    font-size: 16px;
+}
+
+.nav {
+    background-color: $seafoam;
+    padding: 1rem;
+
+    a {
+        text-decoration: none;
+        color: $grey;
+        margin: 1rem 1rem;
+    }
+}
+
+div.inline {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.inline-text {
+    display: inline;
+}
+
+
+.right {
+    padding-left: 30%;
+    padding-right: 1rem;
 }
