@@ -1,22 +1,17 @@
-var ShopControl = function($scope, shopService) {
-
+var ShopControl = function($scope, teaService) {
+    $scope.teas = teaService.teas;
 }
 
 
-
-
-var CheckoutControl = function($scope, shopService) {
+var CheckoutControl = function($scope, teaService) {
 
 }
-
-
-
 
 
 
 // $injections =============================================================
-ShopControl.$inject = ['$scope', 'shopService'];
-CheckoutControl.$inject = ['$scope', 'shopService']
+ShopControl.$inject = ['$scope', 'teaService'];
+CheckoutControl.$inject = ['$scope', 'teaService']
 
 
 // adding controller to app ================================================
