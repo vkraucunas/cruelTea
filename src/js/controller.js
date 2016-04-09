@@ -1,5 +1,6 @@
 var ShopControl = function($scope, teaService) {
     $scope.teas = teaService.teas;
+
 }
 
 

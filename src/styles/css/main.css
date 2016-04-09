@@ -2,7 +2,7 @@ html {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #2d2d2d;
   background-color: #FAF3DD;
-  font-size: 16px; }
+  font-size: 12px; }
 
 .nav {
   background-color: #8FC0A9;
@@ -23,3 +23,9 @@ div.inline {
 .right {
   padding-left: 30%;
   padding-right: 1rem; }
+
+.container {
+  margin-top: 50px; }
+
+.listImg {
+  border-radius: 20%; }

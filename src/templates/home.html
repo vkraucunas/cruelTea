@@ -1,1 +1,26 @@
-<h1>howdy</h1>
+<div class="container">
+    <div class="row">
+        <select>
+            <option>Suckit</option>
+        </select>
+        <input type="text"
+               ng-model="search"
+               name="search"
+               placeholder="Search Cruel Teas">
+    </div>
+
+    <table class="row">
+        <thead>
+            <th>Tea</th>
+            <th>Tea Information</th>
+        </thead>
+        <tbody ng-repeat="tea in teas">
+            <tr>
+                <td><img src="{{tea.imageUrl}}" alt="tea picture" class="listImg"></td>
+                <td>
+                    <h3>{{tea.name}}</h3>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

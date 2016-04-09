@@ -1,7 +1,7 @@
 var teaArray = [
     {
         "_id": "55c8ee82152165d244b98300",
-        "name": "Bayard stew",
+        "name": "Look good for your age mix",
         "ingredients": "concentrated gluten, jewelry, dill, beetle nut, toast",
         "caffeineScale": 244,
         "price": 1540,
@@ -14,7 +14,7 @@ var teaArray = [
 
     {
         "_id": "55c8ee82152165d244b98301",
-        "name": "Incompactness syrup",
+        "name": "You're actually smart! yerba mate",
         "ingredients": "fennel, nutmeg leaves, parsley, cream of 'cream of cream', blarney",
         "caffeineScale": 49,
         "price": 7348,
@@ -26,7 +26,7 @@ var teaArray = [
     },
     {
         "_id": "55c8ee82152165d244b98302",
-        "name": "Flexner white tea",
+        "name": "No offense, but... green tea",
         "ingredients": "hot sauce, iron, beetle nut, fresco, blarney, raw mashed potato",
         "caffeineScale": 38,
         "price": 4991,
@@ -38,7 +38,7 @@ var teaArray = [
     },
     {
         "_id": "55c8ee82152165d244b98303",
-        "name": "Pressor leaf",
+        "name": "Face for radio sachets",
         "ingredients": "purina chow, flavorings, pepper, acorns, quality tallow, old sock, bay leaf",
         "caffeineScale": 153,
         "price": 5496,
@@ -50,7 +50,7 @@ var teaArray = [
     },
     {
         "_id": "55c8ee82152165d244b98304",
-        "name": "Flexner veggie tea",
+        "name": "She seems.... nice matcha",
         "ingredients": "cream of tartar, eggplant, cake, deer antler",
         "caffeineScale": 181,
         "price": 2445,
@@ -62,7 +62,7 @@ var teaArray = [
     },
     {
         "_id": "55c8ee82152165d244b98305",
-        "name": "Topflighter malt",
+        "name": "Looked better on your Tinder profile mix",
         "ingredients": "botox, toast, cream of 'cream of 'cream of cream'', kitchen scraps, beef, aligator tongue, lawn clippings",
         "caffeineScale": 241,
         "price": 4486,
@@ -74,7 +74,7 @@ var teaArray = [
     },
     {
         "_id": "55c8ee82152165d244b98306",
-        "name": "Cooking mix",
+        "name": "You look tired today black tea",
         "ingredients": "flavorings, roasted mushrooms, toast, tumeric",
         "caffeineScale": 230,
         "price": 6973,
@@ -86,7 +86,7 @@ var teaArray = [
     },
     {
         "_id": "55c8ee82152165d244b98307",
-        "name": "Cooking stew",
+        "name": "Go play in traffic peppermint herbal",
         "ingredients": "eggplant",
         "caffeineScale": 122,
         "price": 6003,
@@ -98,7 +98,7 @@ var teaArray = [
     },
     {
         "_id": "55c8ee82152165d244b98308",
-        "name": "Prevenient herb tea",
+        "name": "Weak handshake cinnamon herbal",
         "ingredients": "cream of tartar, cream of cream, kitchen scraps, flavorings",
         "caffeineScale": 196,
         "price": 1374,
@@ -110,7 +110,7 @@ var teaArray = [
     },
     {
         "_id": "55c8ee82152165d244b98309",
-        "name": "Angular mix",
+        "name": "Your mama's roobios",
         "ingredients": "hot sauce, lawn clippings, fennel, parsley, quinine",
         "caffeineScale": 196,
         "price": 4158,

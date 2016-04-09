@@ -9,7 +9,7 @@ html {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: $dark;
     background-color: $cream;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .nav {
@@ -37,4 +37,12 @@ div.inline {
 .right {
     padding-left: 30%;
     padding-right: 1rem;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.listImg {
+    border-radius: 20%;
 }
