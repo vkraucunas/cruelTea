@@ -1,24 +1,85 @@
 <div class="container">
     <div class="row">
-        <select>
-            <option>Suckit</option>
+        <label for="category" class="inline-text">Tea Categories</label>
+        <select name="category"
+                ng-model="category"
+                ng-options="category for category in categories"
+                >
         </select>
         <input type="text"
                ng-model="search"
                name="search"
-               placeholder="Search Cruel Teas">
+               style="margin-left: 50px;"
+               placeholder="Search Cruel Teas"
+               >
     </div>
 
     <table class="row">
         <thead>
             <th>Tea</th>
             <th>Tea Information</th>
+            <th>Add Tea to Basket</th>
         </thead>
-        <tbody ng-repeat="tea in teas">
+        <tbody ng-repeat="tea in teas
+                        | filter:search
+                        | orderBy:tea.categories track by $index"
+                        >
             <tr>
-                <td><img src="{{tea.imageUrl}}" alt="tea picture" class="listImg"></td>
                 <td>
-                    <h3>{{tea.name}}</h3>
+                    <img src="{{tea.imageUrl}}"
+                         alt="tea picture"
+                         class="listImg"
+                         >
+                </td>
+                <td>
+                    <h3 class="teaName"
+                        ng-model="teaProduct.name"
+                        >
+                        {{tea.name}}
+                    </h3>
+                    <p>
+                        <strong>Price: </strong>
+                        {{tea.price}}
+                    </p>
+                    <p>
+                        <strong>Caffeine Rating: </strong>
+                        {{tea.caffeineScale}}
+                    </p>
+                    <p>
+                        <strong>Ingredients: </strong>
+                        {{tea.ingredients}}
+                    </p>
+                    <p>
+                        <strong>Rating: </strong>
+                        {{tea.rating}} of 4
+                    </p>
+                    <p>
+                        <strong>In Stock: </strong>
+                        <!-- figure out true/false -->
+                    </p>
+                    <p class="listName"><strong>Categories: </strong></p>
+                    <ul>
+                        <li ng-repeat="category in tea.categories track by $index">{{category}}</li>
+                    </ul>
+                </td>
+                <td>
+                    <label class="inline-text">Quantity: </label>
+                    <select ng-model="tea.quantity">
+                        <option value="1"
+                                ng-selected="true"
+                                >1
+                        </option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <button ng-click="addToCart()">Add to Basket</button>
                 </td>
             </tr>
         </tbody>

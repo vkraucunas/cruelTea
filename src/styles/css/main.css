@@ -11,6 +11,9 @@ html {
     text-decoration: none;
     color: #696D7D;
     margin: 1rem 1rem; }
+    .nav a button {
+      color: #FAF3DD;
+      background-color: #68B0AB; }
 
 div.inline {
   display: inline-block;
@@ -29,3 +32,13 @@ div.inline {
 
 .listImg {
   border-radius: 20%; }
+
+.teaName {
+  color: #68B0AB; }
+
+.listName {
+  margin-bottom: 0; }
+
+ul {
+  margin-left: 50px;
+  margin-top: 0; }

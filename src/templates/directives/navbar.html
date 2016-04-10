@@ -1,4 +1,5 @@
-<div class="nav row">
+<div class="nav row"
+     ng-controller="ShopControl">
     <a href="/#/">
         <img src="img/logoSm.png" alt="cruel tea logo">
     </a>
@@ -12,6 +13,14 @@
         <p class="inline-text">Contact</p>
     </a>
     <a href="/#/checkout" class="inline-text">
-        <p class="inline-text">Basket</p>
+        <button class="inline-text"
+                style="margin: 0;">
+            Basket:
+                <ng-pluralize count="cartSize"
+                    when="{ '0': 'Empty',
+                            '1': '(1)',
+                            'other': '( {} )'}">
+                </ng-pluralize>
+        </button>
     </a>
 </div>

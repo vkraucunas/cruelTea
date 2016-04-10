@@ -1,6 +1,27 @@
 var ShopControl = function($scope, teaService) {
     $scope.teas = teaService.teas;
-
+    $scope.categories = teaService.categories;
+    $scope.cart = teaService.getCart();
+    $scope.cartSize = $scope.cart.length;
+    $scope.teaProduct = {
+        name: '',
+        img: '',
+        ingredients: '',
+        rating: '',
+        caffeine: '',
+        quantity: 0
+    };
+    $scope.addToCart = function() {
+        teaService.addToCart($scope.teaProduct);
+        $scope.teaProduct = {
+            name: '',
+            img: '',
+            ingredients: '',
+            rating: '',
+            caffeine: '',
+            quantity: 0
+        };
+    };
 }
 
 

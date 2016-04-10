@@ -20,6 +20,11 @@ html {
         text-decoration: none;
         color: $grey;
         margin: 1rem 1rem;
+
+        button {
+            color: $cream;
+            background-color: $robin;
+        }
     }
 }
 
@@ -45,4 +50,17 @@ div.inline {
 
 .listImg {
     border-radius: 20%;
+}
+
+.teaName {
+    color: $robin;
+}
+
+.listName {
+    margin-bottom: 0;
+}
+
+ul {
+    margin-left: 50px;
+    margin-top: 0;
 }

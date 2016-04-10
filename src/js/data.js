@@ -74,7 +74,7 @@ var teaArray = [
     },
     {
         "_id": "55c8ee82152165d244b98306",
-        "name": "You look tired today black tea",
+        "name": "Do you feel okay today? black tea",
         "ingredients": "flavorings, roasted mushrooms, toast, tumeric",
         "caffeineScale": 230,
         "price": 6973,
@@ -120,4 +120,17 @@ var teaArray = [
         "__v": 0,
         "categories": ["spring", "warm","winter"]
     }
+];
+
+var categories = [
+    "awesome",
+    "cold",
+    "dark",
+    "dry",
+    "hot",
+    "lucid",
+    "spring",
+    "summer",
+    "warm",
+    "winter"
 ];
