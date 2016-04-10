@@ -2,31 +2,22 @@ var ShopControl = function($scope, teaService) {
     $scope.teas = teaService.teas;
     $scope.categories = teaService.categories;
     $scope.cart = teaService.getCart();
-    $scope.cartSize = $scope.cart.length;
-    $scope.teaProduct = {
-        name: '',
-        img: '',
-        ingredients: '',
-        rating: '',
-        caffeine: '',
-        quantity: 0
-    };
-    $scope.addToCart = function() {
-        teaService.addToCart($scope.teaProduct);
-        $scope.teaProduct = {
-            name: '',
-            img: '',
-            ingredients: '',
-            rating: '',
-            caffeine: '',
-            quantity: 0
-        };
+    $scope.cartSize = Object.keys($scope.cart).length
+    $scope.addToCart = function(id, quantity) {
+        teaService.addToCart(id, quantity);
     };
 }
 
 
 var CheckoutControl = function($scope, teaService) {
-
+    $scope.cart = teaService.getCart();
+    $scope.editing = false;
+    $scope.deleteItem = function(id) {
+        teaService.deleteItem(id);
+    }
+    $scope.editItem = function(id, quantity) {
+        teaService.editItem(id, quantity);
+    }
 }
 
 

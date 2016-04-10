@@ -17,19 +17,48 @@
                 <tr>
                     <td>
                         <h3>{{product.name}}</h3>
-                        <img src="{{product.img}}" alt="product image" class="listImg">
+                        <img src="{{product.imageUrl}}" alt="product image" class="listImg">
                         <p>
                             <strong>Caffeine Rating: </strong>
-                            {{tea.caffeineScale}}
+                            {{product.caffeineScale}}
                         </p>
                         <p>
                             <strong>Ingredients: </strong>
-                            {{tea.ingredients}}
+                            {{product.ingredients}}
                         </p>
                         <p>
                             <strong>Rating: </strong>
-                            {{tea.rating}} of 4
+                            {{product.rating}} of 4
                         </p>
+                    </td>
+                    <td>
+                        <p ng-show="editing == false">{{product.quantity}}<p>
+                        <select ng-model="product.quantity"
+                                ng-show="editing == true"
+                                >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </td>
+                    <td>{{product.quantity * product.price}}</td>
+                    <td>
+                        <button ng-show="editing == true"
+                                ng-click="editItem(product._id, product.quantity); editing = false;"
+                                >Save
+                        </button>
+                        <button ng-click="editing = true"
+                                ng-show="editing == false"
+                                >Edit
+                        </button>
+                        <button ng-click="deleteItem(product._id)">Delete</button>
                     </td>
                 </tr>
             </tbody>

@@ -32,11 +32,7 @@
                          >
                 </td>
                 <td>
-                    <h3 class="teaName"
-                        ng-model="teaProduct.name"
-                        >
-                        {{tea.name}}
-                    </h3>
+                    <h3 class="teaName">{{tea.name}}</h3>
                     <p>
                         <strong>Price: </strong>
                         {{tea.price}}
@@ -65,10 +61,7 @@
                 <td>
                     <label class="inline-text">Quantity: </label>
                     <select ng-model="tea.quantity">
-                        <option value="1"
-                                ng-selected="true"
-                                >1
-                        </option>
+                        <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -79,7 +72,7 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
-                    <button ng-click="addToCart()">Add to Basket</button>
+                    <button ng-click="addToCart(tea._id,tea.quantity)">Add to Basket</button>
                 </td>
             </tr>
         </tbody>
