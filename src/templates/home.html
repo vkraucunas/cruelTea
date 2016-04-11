@@ -39,7 +39,7 @@
                     </p>
                     <p>
                         <strong>Caffeine Rating: </strong>
-                        {{tea.caffeineScale}}
+                        <span class="caffiene">{{tea.caffeineScale}}</span>
                     </p>
                     <p>
                         <strong>Ingredients: </strong>
@@ -75,6 +75,7 @@
                         <option value="10">10</option>
                     </select>
                     <button ng-click="addToCart(tea._id,tea.quantity)">Add to Basket</button>
+                    <caffeine></caffeine>
                 </td>
             </tr>
         </tbody>

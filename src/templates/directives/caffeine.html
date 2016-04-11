@@ -1,0 +1,17 @@
+
+<div class="box gauge pull-right">
+  <h4 class="center">Caffeine</h4>
+  mg/serving: {{tea.caffeineScale}}<br>
+  Rating: <span ng-if="tea.caffeineScale < 100">LOW</span>
+          <span ng-if="tea.caffeineScale >= 100 && tea.caffeineScale < 200">MEDIUM</span>
+          <span ng-if="tea.caffeineScale >= 200">HIGH</span>
+  <div class="mask">
+    <div class="semi-circle"></div>
+    <div class="semi-circle--mask"
+         style="-webkit-transform: rotate({{tea.caffeineScale / 250 * 180}}deg);
+                -moz-transform: rotate({{tea.caffeineScale / 250 * 180}}deg);
+                transform: rotate({{tea.caffeineScale / 250 * 180}}deg);">
+    </div>
+  </div>
+</div>
+
