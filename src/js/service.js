@@ -20,13 +20,18 @@ app.service('teaService', [function(){
         var teaToAdd = this.teas.filter(function(el) {
             return id === el._id;
         })[0];
-        teaToAdd.quantity = 0;
+
 
         var id = teaToAdd._id;
         if (!this.cart[id]) {
             this.cart[id] = teaToAdd;
         }
-        this.cart[id].quantity += Number(quantity);
+        if (this.cart[id].quantity) {
+            this.cart[id].quantity += Number(quantity);
+        } else {
+            this.cart[id].quantity = Number(quantity);
+        }
+
         this.total();
     };
     this.deleteItem = function(id) {
