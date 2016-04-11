@@ -16,11 +16,11 @@ var CheckoutControl = function($rootScope, $scope, teaService) {
     $scope.deleteItem = function(id) {
         teaService.deleteItem(id);
         $rootScope.cartSize = teaService.getCartSize();
-        $scope.total();
+        $scope.total = teaService.total();
     }
     $scope.editItem = function(id, quantity) {
         teaService.editItem(id, quantity);
-        $scope.total();
+        $scope.total = teaService.total();
     }
 
 }
