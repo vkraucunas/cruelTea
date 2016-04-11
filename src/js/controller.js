@@ -1,34 +1,36 @@
-var ShopControl = function($scope, teaService) {
+var ShopControl = function($rootScope, $scope, teaService) {
     $scope.teas = teaService.teas;
     $scope.categories = teaService.categories;
     $scope.cart = teaService.getCart();
-    $scope.cartSize = Object.keys($scope.cart).length
+    $rootScope.cartSize = 0;
     $scope.addToCart = function(id, quantity) {
         teaService.addToCart(id, quantity);
+        $rootScope.cartSize = teaService.getCartSize();
     };
 }
 
-
-var CheckoutControl = function($scope, teaService) {
+var CheckoutControl = function($rootScope, $scope, teaService) {
     $scope.cart = teaService.getCart();
     $scope.editing = false;
+    $scope.total = teaService.total();
     $scope.deleteItem = function(id) {
         teaService.deleteItem(id);
+        $rootScope.cartSize = teaService.getCartSize();
+        $scope.total();
     }
     $scope.editItem = function(id, quantity) {
         teaService.editItem(id, quantity);
+        $scope.total();
     }
+
 }
 
-
-
 // $injections =============================================================
-ShopControl.$inject = ['$scope', 'teaService'];
-CheckoutControl.$inject = ['$scope', 'teaService']
-
+ShopControl.$inject = ['$rootScope','$scope', 'teaService'];
+CheckoutControl.$inject = ['$rootScope', '$scope', 'teaService'];
 
 // adding controller to app ================================================
 app.controller('ShopControl', ShopControl);
-app.controller('CheckoutControl', CheckoutControl)
+app.controller('CheckoutControl', CheckoutControl);
 
 

@@ -2,6 +2,6 @@ app.directive('navBarDirective', function() {
     return {
         restrict: 'E',
         transclude: true,
-        templateUrl: 'templates/directives/navBar.html',
+        templateUrl: 'templates/directives/navBar.html'
     }
 })

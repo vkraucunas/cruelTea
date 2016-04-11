@@ -1,7 +1,7 @@
 <main class="container">
     <div class="row">
         <h1 class="inline-text">My Basket</h1>
-        <h1 class="inline-text" style="margin-left: 50%">Order total: </h1>
+        <h1 class="inline-text" style="margin-left: 50%">Order total: {{total | monies}}</h1>
     </div>
     <div class="row">
         <table>
@@ -48,7 +48,7 @@
                             <option value="10">10</option>
                         </select>
                     </td>
-                    <td>{{product.quantity * product.price}}</td>
+                    <td>{{product.quantity * product.price | monies}}</td>
                     <td>
                         <button ng-show="editing == true"
                                 ng-click="editItem(product._id, product.quantity); editing = false;"
@@ -63,5 +63,6 @@
                 </tr>
             </tbody>
         </table>
+        <button>Place Order</button>
     </div>
 </main>

@@ -21,8 +21,8 @@
             <th>Add Tea to Basket</th>
         </thead>
         <tbody ng-repeat="tea in teas
-                        | filter:search
-                        | orderBy:tea.categories track by $index"
+                        | filter: category
+                        | filter: search"
                         >
             <tr>
                 <td>
@@ -35,7 +35,7 @@
                     <h3 class="teaName">{{tea.name}}</h3>
                     <p>
                         <strong>Price: </strong>
-                        {{tea.price}}
+                        {{ tea.price | monies }}
                     </p>
                     <p>
                         <strong>Caffeine Rating: </strong>
@@ -51,7 +51,8 @@
                     </p>
                     <p>
                         <strong>In Stock: </strong>
-                        <!-- figure out true/false -->
+                        <span ng-if="tea.inStock">Yes</span>
+                        <span ng-if="!tea.inStock">Coming soon!</span>
                     </p>
                     <p class="listName"><strong>Categories: </strong></p>
                     <ul>
@@ -60,7 +61,8 @@
                 </td>
                 <td>
                     <label class="inline-text">Quantity: </label>
-                    <select ng-model="tea.quantity">
+                    <select ng-model="tea.quantity"
+                            ng-init="tea.quantity='1'">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
